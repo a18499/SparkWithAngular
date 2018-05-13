@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="phonecatApp">
+<head>
+    ...
+    <script src="/js/angular.js"></script>
+    <script src="/js/angular-resource.js"></script>
+    <script src="/scripts/app.js"></script>
+</head>
+<body >
+<div ng-controller="PhoneListController">
+    <ul>
+        <li ng-repeat="phone in phones">
+            <span>{{phone.name}}</span>
+            <p>{{phone.snippet}}</p>
+        </li>
+    </ul>
+</div>
+<div ng-view></div>
+<div ng-controller="httpController">
+    {{status}}<br/>
+    {{data}}
+</div>
+
+
+</body>
+</html>
